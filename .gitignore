@@ -17,6 +17,7 @@ lerna-debug.log*
 .DS_Store
 
 # Tests
+mc
 /coverage
 /.nyc_output
 
