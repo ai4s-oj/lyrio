@@ -43,7 +43,7 @@ async function initialize(): Promise<[packageInfo: any, configService: ConfigSer
       )})`
     : "";
 
-  if (cluster.isMaster) Logger.log(`Starting ${packageInfo.name} version ${appVersion}${gitRepoVersion}`, "Bootstrap");
+  if (cluster.isPrimary) Logger.log(`Starting ${packageInfo.name} version ${appVersion}${gitRepoVersion}`, "Bootstrap");
 
   // Create nestjs app
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
